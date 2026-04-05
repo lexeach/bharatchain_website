@@ -1,38 +1,41 @@
-
-Action: file_editor create /app/frontend/src/App.js --file-text "import React from 'react';
+import React from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import TrustTicker from './components/TrustTicker';
 import SovereignPillars from './components/SovereignPillars';
 import VishvasyaStack from './components/VishvasyaStack';
-import UseCaseSlider from './components/UseCaseSlider';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
-import './App.css';
+import { Toaster } from 'sonner';
 
 function App() {
   return (
-    <div className=\"App\">
+    <div className="min-h-screen bg-white font-sans selection:bg-[#FF9933]/30">
+      {/* Toast notifications for form submissions */}
+      <Toaster position="top-center" expand={false} richColors />
+      
       <Header />
+      
       <main>
         <HeroSection />
         <TrustTicker />
-        <section id=\"features\">
+        
+        <section id="features">
           <SovereignPillars />
         </section>
-        <section id=\"architecture\">
+        
+        <section id="architecture">
           <VishvasyaStack />
         </section>
-        <section id=\"usecases\">
-          <UseCaseSlider />
-        </section>
+        
+        {/* Use Cases section can be added here or integrated into Pillars */}
+        
         <ContactSection />
       </main>
+      
       <Footer />
     </div>
   );
 }
 
 export default App;
-"
-Observation: Overwrite successful: /app/frontend/src/App.js

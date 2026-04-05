@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Official Bharat Brand Colors */
+:root {
+  --brand-navy: #002147;
+  --brand-saffron: #FF9933;
+  --brand-white: #FFFFFF;
+  --brand-green: #128807;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc;
+  color: #002147;
+}
+
+/* Custom selection color to match the theme */
+::selection {
+  background-color: rgba(255, 153, 51, 0.3);
+  color: #002147;
+}
