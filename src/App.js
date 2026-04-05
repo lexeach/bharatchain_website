@@ -1,11 +1,11 @@
 import React from 'react';
 import Header from './components/Header';
+import SovereignPillars from './components/SovereignPillars'; // Ensure this matches the file name
+import Footer from './components/Footer';
 import HeroSection from './components/HeroSection';
 import TrustTicker from './components/TrustTicker';
-import SovereignPillars from './components/SovereignPillars';
 import VishvasyaStack from './components/VishvasyaStack';
 import ContactSection from './components/ContactSection';
-import Footer from './components/Footer';
 import { Toaster } from 'sonner';
 
 function App() {
