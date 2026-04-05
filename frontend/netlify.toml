@@ -1,0 +1,73 @@
+I'll create the necessary Netlify deployment files for you:
+Action: file_editor create /app/frontend/netlify.toml --file-text "# Netlify Configuration for BharatChain Landing Page
+
+[build]
+  # Build command
+  command = \"yarn build\"
+  
+  # Directory to deploy (build output)
+  publish = \"build\"
+  
+  # Base directory
+  base = \"\"
+
+[build.environment]
+  # Node version
+  NODE_VERSION = \"18\"
+  
+  # Yarn version
+  YARN_VERSION = \"1.22.22\"
+
+# Redirect rules for Single Page Application
+[[redirects]]
+  from = \"/*\"
+  to = \"/index.html\"
+  status = 200
+
+# Headers for security and performance
+[[headers]]
+  for = \"/*\"
+  [headers.values]
+    # Security headers
+    X-Frame-Options = \"DENY\"
+    X-Content-Type-Options = \"nosniff\"
+    X-XSS-Protection = \"1; mode=block\"
+    Referrer-Policy = \"strict-origin-when-cross-origin\"
+    
+    # Cache control
+    Cache-Control = \"public, max-age=31536000, immutable\"
+
+[[headers]]
+  for = \"/index.html\"
+  [headers.values]
+    Cache-Control = \"public, max-age=0, must-revalidate\"
+
+[[headers]]
+  for = \"/*.js\"
+  [headers.values]
+    Cache-Control = \"public, max-age=31536000, immutable\"
+
+[[headers]]
+  for = \"/*.css\"
+  [headers.values]
+    Cache-Control = \"public, max-age=31536000, immutable\"
+
+# Performance optimizations
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.images]
+  compress = true
+"
+Observation: Create successful: /app/frontend/netlify.toml
