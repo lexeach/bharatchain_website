@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Send, Building, Mail, User, MessageSquare, CheckCircle2 } from 'lucide-react';
-import { Button } from './ui/button';
 
 const ContactSection = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -54,23 +53,26 @@ const ContactSection = () => {
                   <label className="text-sm font-semibold text-[#002147] flex items-center gap-2">
                     <User className="w-4 h-4" /> Full Name
                   </label>
-                  <input required type="text" className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none" placeholder="D K Gautam" />
+                  <input required type="text" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#FF9933] outline-none transition-all" placeholder="Enter your name" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-semibold text-[#002147] flex items-center gap-2">
                     <Building className="w-4 h-4" /> Organization
                   </label>
-                  <input required type="text" className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none" placeholder="Department / Startup Name" />
+                  <input required type="text" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#FF9933] outline-none transition-all" placeholder="Department / Startup" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-semibold text-[#002147] flex items-center gap-2">
                     <MessageSquare className="w-4 h-4" /> Message
                   </label>
-                  <textarea required rows="4" className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none resize-none" placeholder="How can we help you?" />
+                  <textarea required rows="4" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#FF9933] outline-none transition-all resize-none" placeholder="How can we help you?" />
                 </div>
-                <Button type="submit" className="w-full bg-[#002147] hover:bg-[#003366] text-white py-6 text-lg rounded-xl">
-                  Send Inquiry <Send className="w-4 h-4 ml-2" />
-                </Button>
+                <button 
+                  type="submit" 
+                  className="w-full bg-[#002147] hover:bg-[#003366] text-white py-4 px-6 text-lg font-bold rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg active:scale-[0.98]"
+                >
+                  Send Inquiry <Send className="w-4 h-4" />
+                </button>
               </form>
             )}
           </div>
