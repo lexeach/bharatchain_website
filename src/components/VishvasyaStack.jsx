@@ -1,5 +1,4 @@
 
-Action: file_editor create /app/frontend/src/components/VishvasyaStack.jsx --file-text "import React from 'react';
 import { vishvasyaStack } from '../mock';
 import { ArrowUp, Layers } from 'lucide-react';
 

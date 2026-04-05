@@ -1,5 +1,4 @@
 
-Action: file_editor create /app/frontend/src/components/TrustTicker.jsx --file-text "import React, { useState, useEffect } from 'react';
 import { Activity, Users, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { trustMetrics } from '../mock';
 
